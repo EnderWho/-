@@ -68,7 +68,7 @@ if os.path.exists(path_Y):
         # 遍历最下的文件，并删除
         for cc in cs:
             os.remove(os.path.join(a1, cc))
-        # 将遍历删除的
+        # 遍历文件夹，删除
         for bb in b1:
             os.rmdir(os.path.join(a1, bb))
     os.rmdir(path_Y)
@@ -77,3 +77,42 @@ else:
     print "yesterday doesn't copy"
 
 
+'''
+for a1, b1, cs in os.walk('F:\\hello-world\\1\\', topdown=False):
+    for cc in cs:
+        print (os.path.join(a1, cc))
+    print 'end'
+    for bb in b1:
+        print (os.path.join(a1, bb))
+    print 'over'
+
+按照层级从上往下为：
+@1 文件夹 1
+@2 文件夹 21                          文件夹 22
+@3 文件 31   文件夹 32                文件 33
+@4
+
+返回结果为：
+# step 1 查最深的一层@4 中的内容(因为@3 内有文件夹，如无文件夹，则不会打开@4 层查询)
+end
+over
+
+# step 2 查@3 中的文件及同级的文件夹
+F:\hello-world\1\21\31.txt
+end
+F:\hello-world\1\21\32
+over
+
+# step 3 查@3 中另一个文件
+F:\hello-world\1\22\33.txt
+end
+over
+
+# step 4 查@2 中文件夹及文件
+end
+F:\hello-world\1\21
+F:\hello-world\1\22
+over
+
+
+'''

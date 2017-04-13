@@ -1,9 +1,8 @@
 # coding=utf-8
+# Filename: test.py
 
-N = ['Michael', 100 + 0.2, True and False, 100 / 3]
-N.pop()  # 删除最后一个
-print N  # ['Michael', 100.2, False]
-N.pop(1)  # 删除指定位置
-print N  # ['Michael', False]
-N.pop(-1)  # 删除倒序位置
-print N  # ['Michael']
+'''
+我会建议你先解决这样一个问题：创建你自己的命令行 地址簿 程序。
+在这个程序中，你可以添加、修改、删除和搜索你的联系人（朋友、家人和同事等等）以及它们的信息（诸如电子邮件地址和/或电话号码）。
+这些详细信息应该被保存下来以便以后提取。
+'''
